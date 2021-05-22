@@ -1,0 +1,10 @@
+{
+  "prettier.bracketSpacing": false,
+  "editor.formatOnSave": true,
+  "launch": {
+
+    "configurations": [],
+    "compounds": []
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}

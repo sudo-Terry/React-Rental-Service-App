@@ -69,11 +69,11 @@ const NavBtn = styled.div`
   }
 `
 
-function Navbar(props) {
+function Navbar({toggle}) {
   return (
     <Nav>
       <Logo to="/">ELIXR</Logo>
-      <MenuBars>
+      <MenuBars onClick={toggle}>
         <FaBars />
       </MenuBars>
       <NavMenu>

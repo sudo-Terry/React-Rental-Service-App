@@ -1,15 +1,15 @@
-import React, { useState, useRef, useEffect } from 'react';
-import styled, { css } from 'styled-components/macro';
-import { Button } from './Button';
-import { IoMdArrowRoundForward } from 'react-icons/io'
-import { IoArrowForward, IoArrowBack } from 'react-icons/io5';
+import React, {useState, useRef, useEffect} from "react";
+import styled, {css} from "styled-components/macro";
+import {Button} from "./Button";
+import {IoMdArrowRoundForward} from "react-icons/io";
+import {IoArrowForward, IoArrowBack} from "react-icons/io5";
 
 const HeroSection = styled.section`
   height: 100vh;
   max-height: 1100px;
   position: relative;
   overflow: hidden;
-`
+`;
 
 const HeroWrapper = styled.div`
   width: 100%;
@@ -19,13 +19,13 @@ const HeroWrapper = styled.div`
   align-items: center;
   overflow: hidden;
   position: relative;
-`
+`;
 
 const HeroSlide = styled.div`
   z-index: 1;
   width: 100%;
   height: 100%;
-`
+`;
 
 const HeroSlider = styled.div`
   position: absolute;
@@ -38,7 +38,7 @@ const HeroSlider = styled.div`
   justify-content: center;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     z-index: 2;
     width: 100%;
@@ -51,11 +51,10 @@ const HeroSlider = styled.div`
       0deg,
       rgba(0, 0, 0, 0.2) 0%,
       rgba(0, 0, 0, 0.2) 50%,
-      rgba(0, 0, 0, 0.6) 100% 
+      rgba(0, 0, 0, 0.6) 100%
     );
   }
-`
-
+`;
 
 const HeroImage = styled.img`
   position: absolute;
@@ -64,7 +63,47 @@ const HeroImage = styled.img`
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-`
+  animation: fadein 2s;
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+  -o-animation: fadein 2s; /* Opera */
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @-moz-keyframes fadein {
+    /* Firefox */
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes fadein {
+    /* Safari and Chrome */
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @-o-keyframes fadein {
+    /* Opera */
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+`;
 
 const HeroContent = styled.div`
   position: relative;
@@ -75,20 +114,20 @@ const HeroContent = styled.div`
   width: calc(100% - 100px);
   color: #fff;
 
-  h1{
+  h1 {
     font-size: clamp(1rem, 8vw, 2rem);
     font-weight: 400;
     text-transform: uppercase;
-    text-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
     text-align: left;
     margin-bottom: 0.8rem;
   }
 
-  p{
+  p {
     margin-bottom: 1.2rem;
-    text-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
   }
-`
+`;
 
 const SliderButtons = styled.div`
   position: absolute;
@@ -96,7 +135,7 @@ const SliderButtons = styled.div`
   right: 50px;
   display: flex;
   z-index: 10;
-`
+`;
 
 const arrowButtons = css`
   width: 50px;
@@ -114,49 +153,50 @@ const arrowButtons = css`
     background: #cd853f;
     transform: scale(1.05);
   }
-`
+`;
 
 const Arrow = styled(IoMdArrowRoundForward)`
   margin-left: 0.5rem;
-`
+`;
 
 const PrevArrow = styled(IoArrowBack)`
   ${arrowButtons}
-`
+`;
 
 const NextArrow = styled(IoArrowForward)`
   ${arrowButtons}
-`
+`;
 
-
-function Hero({ slides }) {
+function Hero({slides}) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const length = slides.length;
   const timeout = useRef(null);
 
-  useEffect (() => {
+  useEffect(() => {
     const nextSlide = () => {
-      setCurrentSlide ( currentSlide => (currentSlide === length - 1 ? 0 : currentSlide + 1))
+      setCurrentSlide(currentSlide =>
+        currentSlide === length - 1 ? 0 : currentSlide + 1
+      );
     };
 
     timeout.current = setTimeout(nextSlide, 3000);
 
     return function () {
-      if(timeout.current){
+      if (timeout.current) {
         clearTimeout(timeout.current);
       }
-    }
-  }, [currentSlide, length])
+    };
+  }, [currentSlide, length]);
 
   const nextSlide = () => {
     setCurrentSlide(currentSlide === length - 1 ? 0 : currentSlide + 1);
-  }
+  };
 
   const prevSlide = () => {
     setCurrentSlide(currentSlide === 0 ? length - 1 : currentSlide - 1);
-  }
+  };
 
-  if(!Array.isArray(slides) || slides.length <= 0){
+  if (!Array.isArray(slides) || slides.length <= 0) {
     return null;
   }
 
@@ -172,7 +212,13 @@ function Hero({ slides }) {
                   <HeroContent>
                     <h1>{slide.title}</h1>
                     <p>{slide.price}</p>
-                    <Button to={slide.path} primary='true' css={`max-width: 160px;`} >
+                    <Button
+                      to={slide.path}
+                      primary="true"
+                      css={`
+                        max-width: 160px;
+                      `}
+                    >
                       {slide.label}
                       <Arrow />
                     </Button>
@@ -183,7 +229,7 @@ function Hero({ slides }) {
           );
         })}
         <SliderButtons>
-          <PrevArrow onClick={prevSlide}/>
+          <PrevArrow onClick={prevSlide} />
           <NextArrow onClick={nextSlide} />
         </SliderButtons>
       </HeroWrapper>

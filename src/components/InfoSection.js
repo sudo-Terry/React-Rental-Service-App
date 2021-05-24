@@ -31,6 +31,45 @@ export const ColumnLeft = styled.div`
   h1 {
     margin-bottom: 1rem;
     font-size: clamp(1.5rem, 6vw, 2rem);
+    animation-name: move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
+    @keyframes move {
+      from {
+        left: -100px;
+      }
+      to {
+        left: 0px;
+      }
+    }
+
+    @-moz-keyframes move {
+      from {
+        left: -100px;
+      }
+      to {
+        left: 0px;
+      }
+    }
+
+    @keyframes move {
+      from {
+        left: -100px;
+      }
+      to {
+        left: 0px;
+      }
+    }
+
+    @-o-keyframes move {
+      from {
+        left: -100px;
+      }
+      to {
+        left: 0px;
+      }
+    }
   }
 
   p {

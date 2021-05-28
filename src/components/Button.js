@@ -18,6 +18,6 @@ export const Button = styled(Link)`
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    transform: translateY(-2px);
+    transform: scale(1.1);
   }
 `;

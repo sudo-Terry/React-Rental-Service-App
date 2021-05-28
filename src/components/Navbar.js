@@ -65,6 +65,12 @@ const NavMenu = styled.div`
 
 const NavMenuLinks = styled(Link)`
   ${NavLink}
+  padding: 1.8rem 1rem;
+  transition: 0.2ms all ease-in-out;
+
+  &:hover {
+    border-bottom: 2px solid #fff;
+  }
 `;
 
 const NavBtn = styled.div`
@@ -81,7 +87,7 @@ function Navbar({toggle}) {
   const [navBackActive, setNavBackActive] = useState(false);
 
   const changeBackground = () => {
-    if (window.scrollY >= 800) {
+    if (window.scrollY >= 500) {
       setNavBackActive(true);
     } else {
       setNavBackActive(false);

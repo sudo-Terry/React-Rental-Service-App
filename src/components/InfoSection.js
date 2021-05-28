@@ -88,7 +88,9 @@ function InfoSection({
           <h1>{heading}</h1>
           <p>{paragraphOne}</p>
           <p>{paragraphTwo}</p>
-          <Button to="/homes">{buttonLabel}</Button>
+          <Button primary="true" to="/homes">
+            {buttonLabel}
+          </Button>
         </ColumnLeft>
         <ColumnRight reverse={reverse} data-aos="fade-up">
           <img src={image} alt="home" />

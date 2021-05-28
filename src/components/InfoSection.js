@@ -1,6 +1,8 @@
-import React from "react";
+import React, {useEffect} from "react";
 import styled from "styled-components";
 import {Button} from "./Button";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export const Section = styled.div`
   width: 100%;
@@ -69,16 +71,23 @@ function InfoSection({
   reverse,
   image,
 }) {
+  useEffect(() => {
+    Aos.init({duration: 2000});
+  }, []);
+
   return (
     <Section>
       <Container>
-        <ColumnLeft reverse={reverse}>
+        <ColumnLeft
+          reverse={reverse}
+          data-aos={reverse ? "fade-left" : "fade-right"}
+        >
           <h1>{heading}</h1>
           <p>{paragraphOne}</p>
           <p>{paragraphTwo}</p>
           <Button to="/homes">{buttonLabel}</Button>
         </ColumnLeft>
-        <ColumnRight reverse={reverse}>
+        <ColumnRight reverse={reverse} data-aos="fade-up">
           <img src={image} alt="home" />
         </ColumnRight>
       </Container>

@@ -3,6 +3,8 @@ import styled, {css} from "styled-components/macro";
 import {Button} from "./Button";
 import {IoMdArrowRoundForward} from "react-icons/io";
 import {IoArrowForward, IoArrowBack} from "react-icons/io5";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const HeroSection = styled.section`
   height: 100vh;
@@ -18,7 +20,7 @@ const HeroWrapper = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  position: relative;
+  position: fixed;
 `;
 
 const HeroSlide = styled.div`
@@ -63,44 +65,52 @@ const HeroImage = styled.img`
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  animation: fadein 2s;
-  -moz-animation: fadein 2s; /* Firefox */
-  -webkit-animation: fadein 2s; /* Safari and Chrome */
-  -o-animation: fadein 2s; /* Opera */
+  animation: scale 2s;
+  -moz-animation: scale 2s; /* Firefox */
+  -webkit-animation: scale 2s; /* Safari and Chrome */
+  -o-animation: scale 2s; /* Opera */
 
-  @keyframes fadein {
+  @keyframes scale {
     from {
       opacity: 0;
+      transform: scale(0.8);
     }
     to {
       opacity: 1;
+      transform: scale(1);
     }
   }
-  @-moz-keyframes fadein {
+  @-moz-keyframes scale {
     /* Firefox */
     from {
       opacity: 0;
+      transform: scale(0.8);
     }
     to {
       opacity: 1;
+      transform: scale(1);
     }
   }
-  @-webkit-keyframes fadein {
+  @-webkit-keyframes scale {
     /* Safari and Chrome */
     from {
       opacity: 0;
+      transform: scale(0.8);
     }
     to {
       opacity: 1;
+      transform: scale(1);
     }
   }
-  @-o-keyframes fadein {
+  @-o-keyframes scale {
     /* Opera */
     from {
       opacity: 0;
+      transform: scale(0.8);
     }
     to {
       opacity: 1;
+      transform: scale(1);
     }
   }
 `;
@@ -147,7 +157,7 @@ const arrowButtons = css`
   padding: 10px;
   margin-right: 1rem;
   user-select: none;
-  transition: 0ms.3s;
+  transition: 0.3ms;
 
   &:hover {
     background: #cd853f;
@@ -196,6 +206,10 @@ function Hero({slides}) {
     setCurrentSlide(currentSlide === 0 ? length - 1 : currentSlide - 1);
   };
 
+  useEffect(() => {
+    Aos.init({duration: 2000});
+  }, []);
+
   if (!Array.isArray(slides) || slides.length <= 0) {
     return null;
   }
@@ -210,11 +224,12 @@ function Hero({slides}) {
                 <HeroSlider>
                   <HeroImage src={slide.image} alt={slide.alt} />
                   <HeroContent>
-                    <h1>{slide.title}</h1>
-                    <p>{slide.price}</p>
+                    <h1 data-aos="fade-down">{slide.title}</h1>
+                    <p data-aos="fade-down">{slide.price}</p>
                     <Button
                       to={slide.path}
                       primary="true"
+                      data-aos="fade-up"
                       css={`
                         max-width: 160px;
                       `}

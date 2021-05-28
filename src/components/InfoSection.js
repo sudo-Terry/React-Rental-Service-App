@@ -5,9 +5,12 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 export const Section = styled.div`
+  position: relative;
   width: 100%;
   height: 100%;
   padding: 4rem 0rem;
+  background-color: #fff;
+  z-index: 0;
 `;
 
 export const Container = styled.div`

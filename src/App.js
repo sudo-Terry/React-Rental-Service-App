@@ -21,8 +21,12 @@ function App() {
       <Navbar toggle={toggle} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
       <Hero slides={SliderData} />
-      <InfoSection {...InfoData} />
-      <InfoSection {...InfoDataTwo} />
+      <div id="about">
+        <InfoSection {...InfoData} />
+        <InfoSection {...InfoDataTwo} />
+      </div>
+      <div id="homes"></div>
+      <div id="rentals"></div>
       <Footer />
     </>
   );

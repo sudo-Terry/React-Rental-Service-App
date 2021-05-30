@@ -1,9 +1,11 @@
 import React, {useState} from "react";
 import styled, {css} from "styled-components/macro";
 import {Link} from "react-router-dom";
+import {Link as LinkS} from "react-scroll";
 import {menuData} from "../data/MenuData";
 import {Button} from "./Button";
 import {FaBars} from "react-icons/fa";
+import {animateScroll as scroll} from "react-scroll";
 
 const Nav = styled.nav`
   height: 60px;
@@ -63,7 +65,7 @@ const NavMenu = styled.div`
   }
 `;
 
-const NavMenuLinks = styled(Link)`
+const NavMenuLinks = styled(LinkS)`
   ${NavLink}
   padding: 1.8rem 1rem;
   transition: 0.2ms all ease-in-out;
@@ -96,15 +98,28 @@ function Navbar({toggle}) {
 
   window.addEventListener("scroll", changeBackground);
 
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <Nav className={navBackActive ? "active" : ""}>
-      <Logo to="/">ELIXR</Logo>
+      <Logo to="/" onClick={toggleHome}>
+        ELIXR
+      </Logo>
       <MenuBars onClick={toggle}>
         <FaBars />
       </MenuBars>
       <NavMenu>
         {menuData.map((item, index) => (
-          <NavMenuLinks to={item.path} key={index}>
+          <NavMenuLinks
+            to={item.path}
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            key={index}
+          >
             {item.title}
           </NavMenuLinks>
         ))}

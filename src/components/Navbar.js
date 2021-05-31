@@ -32,6 +32,10 @@ const NavLink = css`
   height: 100%;
   cursor: pointer;
   text-decoration: none;
+
+  &.active {
+    border-bottom: 3px solid #fff;
+  }
 `;
 
 const Logo = styled(Link)`

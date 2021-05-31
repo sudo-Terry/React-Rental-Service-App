@@ -14,4 +14,9 @@ export const menuData = [
     link: "/rentals",
     path: "rentals",
   },
+  {
+    title: "Location",
+    link: "/location",
+    path: "location",
+  },
 ];

@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import EventSection from "./components/EventSection";
 import Dropdown from "./components/Dropdown";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
@@ -27,7 +28,9 @@ function App() {
         <InfoSection {...InfoDataTwo} />
       </div>
       <div id="homes"></div>
-      <div id="rentals"></div>
+      <div id="events">
+        <EventSection />
+      </div>
       <div id="location">
         <MapSection />
       </div>

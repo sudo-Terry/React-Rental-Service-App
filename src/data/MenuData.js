@@ -10,9 +10,9 @@ export const menuData = [
     path: "homes",
   },
   {
-    title: "Rentals",
-    link: "/rentals",
-    path: "rentals",
+    title: "Events",
+    link: "/events",
+    path: "events",
   },
   {
     title: "Location",

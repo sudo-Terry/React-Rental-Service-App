@@ -8,7 +8,7 @@ const MapContainer = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  padding: 4rem 0rem;
+  padding: 8rem 0rem;
   background-color: #fff;
   z-index: 0;
 `;
@@ -51,6 +51,10 @@ function MapSection(props) {
       position: markerPosition,
     });
     marker.setMap(map);
+  }, []);
+
+  useEffect(() => {
+    Aos.init({duration: 2000});
   }, []);
 
   return (

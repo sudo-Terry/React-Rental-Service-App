@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/React-Rental-Service-App/static/js/main.aba9f220.chunk.js",
-    "main.js.map": "/React-Rental-Service-App/static/js/main.aba9f220.chunk.js.map",
+    "main.js": "/React-Rental-Service-App/static/js/main.62702671.chunk.js",
+    "main.js.map": "/React-Rental-Service-App/static/js/main.62702671.chunk.js.map",
     "runtime-main.js": "/React-Rental-Service-App/static/js/runtime-main.b1a10af4.js",
     "runtime-main.js.map": "/React-Rental-Service-App/static/js/runtime-main.b1a10af4.js.map",
     "static/css/2.ec02d681.chunk.css": "/React-Rental-Service-App/static/css/2.ec02d681.chunk.css",
-    "static/js/2.19a80cbc.chunk.js": "/React-Rental-Service-App/static/js/2.19a80cbc.chunk.js",
-    "static/js/2.19a80cbc.chunk.js.map": "/React-Rental-Service-App/static/js/2.19a80cbc.chunk.js.map",
+    "static/js/2.f8bef9c6.chunk.js": "/React-Rental-Service-App/static/js/2.f8bef9c6.chunk.js",
+    "static/js/2.f8bef9c6.chunk.js.map": "/React-Rental-Service-App/static/js/2.f8bef9c6.chunk.js.map",
     "index.html": "/React-Rental-Service-App/index.html",
     "static/css/2.ec02d681.chunk.css.map": "/React-Rental-Service-App/static/css/2.ec02d681.chunk.css.map",
-    "static/js/2.19a80cbc.chunk.js.LICENSE.txt": "/React-Rental-Service-App/static/js/2.19a80cbc.chunk.js.LICENSE.txt",
+    "static/js/2.f8bef9c6.chunk.js.LICENSE.txt": "/React-Rental-Service-App/static/js/2.f8bef9c6.chunk.js.LICENSE.txt",
     "static/media/ImageFive.adf9a021.jpg": "/React-Rental-Service-App/static/media/ImageFive.adf9a021.jpg",
     "static/media/ImageFour.fac2a18a.jpg": "/React-Rental-Service-App/static/media/ImageFour.fac2a18a.jpg",
     "static/media/ImageOne.bcc7f860.jpg": "/React-Rental-Service-App/static/media/ImageOne.bcc7f860.jpg",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.b1a10af4.js",
     "static/css/2.ec02d681.chunk.css",
-    "static/js/2.19a80cbc.chunk.js",
-    "static/js/main.aba9f220.chunk.js"
+    "static/js/2.f8bef9c6.chunk.js",
+    "static/js/main.62702671.chunk.js"
   ]
 }

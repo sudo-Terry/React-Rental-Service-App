@@ -24,8 +24,8 @@ const MapTitle = styled.h1`
   display: block;
   color: #101522;
   width: 300px;
-  padding: 10px 10px;
   margin-bottom: 40px;
+  padding: 10px 10px;
   border-bottom: 3px solid #101522;
 `;
 

@@ -109,7 +109,7 @@ function Navbar({toggle}) {
   return (
     <Nav className={navBackActive ? "active" : ""}>
       <Logo to="/" onClick={toggleHome}>
-        ELIXR
+        Home4U
       </Logo>
       <MenuBars onClick={toggle}>
         <FaBars />

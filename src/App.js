@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import {InfoData, InfoDataTwo} from "./data/InfoData";
 import {SliderData} from "./data/SliderData";
 import GlobalStyle from "./globalStyle";
+import VideoSection from "./components/VideoSection";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,10 +25,12 @@ function App() {
       <Dropdown isOpen={isOpen} toggle={toggle} />
       <Hero slides={SliderData} />
       <div id="about">
+        <VideoSection />
+      </div>
+      <div id="homes">
         <InfoSection {...InfoData} />
         <InfoSection {...InfoDataTwo} />
       </div>
-      <div id="homes"></div>
       <div id="events">
         <EventSection />
       </div>

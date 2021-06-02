@@ -168,10 +168,10 @@ function Footer(props) {
         <SocialMedia>
           <SocialMediaWrap>
             <SocialLogo to="/" onClick={toggleHome}>
-              ELIXR
+              Home4U
             </SocialLogo>
             <WebsiteRights>
-              ELIXR ⓒ {new Date().getFullYear()} All rights reserved
+              Home4U ⓒ {new Date().getFullYear()} All rights reserved
             </WebsiteRights>
             <SocialIcons>
               <SocialIconLink href="/" target="_blank" aria-label="Facebook">

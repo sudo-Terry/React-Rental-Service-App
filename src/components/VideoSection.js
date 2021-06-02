@@ -15,14 +15,14 @@ const VideoContainer = styled.div`
 
 const VideoTitle = styled.h1`
   text-align: center;
+  margin-bottom: 4rem;
 `;
 
 const VideoWrapper = styled.div`
   display: flex;
-  width: 1280px;
-  height: 760px;
   align-items: center;
   justify-content: center;
+  padding: 0 2rem;
   margin: 0 auto;
 `;
 
@@ -37,8 +37,7 @@ function VideoSection(props) {
       <VideoWrapper data-aos="fade-right">
         <ReactPlayer
           url="https://www.youtube.com/watch?v=Te1bdN2-gJQ"
-          width="80%"
-          height="80%"
+          controls
         />
       </VideoWrapper>
     </VideoContainer>

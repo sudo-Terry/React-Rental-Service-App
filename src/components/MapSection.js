@@ -35,6 +35,16 @@ const MapWrapper = styled.div`
   justify-content: center;
 `;
 
+const Map = styled.div`
+  width: 500px;
+  height: 400px;
+
+  @media screen and (max-width: 640px) {
+    width: 300px;
+    height: 250px;
+  }
+`;
+
 function MapSection(props) {
   useEffect(() => {
     var container = document.getElementById("map");
@@ -63,7 +73,7 @@ function MapSection(props) {
         <MapTitle>Our Location</MapTitle>
       </MapTitleWrapper>
       <MapWrapper data-aos="fade-right">
-        <div id="map" style={{width: "500px", height: "400px"}}></div>
+        <Map id="map" />
       </MapWrapper>
     </MapContainer>
   );

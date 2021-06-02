@@ -1,6 +1,7 @@
 import React from "react";
 import {FaTimes} from "react-icons/fa";
 import {Link} from "react-router-dom";
+import {Link as LinkS} from "react-scroll";
 import styled from "styled-components";
 import {menuData} from "../data/MenuData";
 import {Button} from "./Button";
@@ -16,7 +17,7 @@ const DropdownContainer = styled.div`
   top: 0;
   left: 0;
   transition: 0.3s ease-in-out;
-  opacity: ${({isOpen}) => (isOpen ? "0.9" : "0")};
+  opacity: ${({isOpen}) => (isOpen ? "1" : "0")};
   top: ${({isOpen}) => (isOpen ? "0" : "-100%")};
 `;
 
@@ -48,7 +49,7 @@ const DropdownMenu = styled.div`
   }
 `;
 
-const DropdownLink = styled(Link)`
+const DropdownLink = styled(LinkS)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,7 +80,7 @@ function Dropdown({toggle, isOpen}) {
       <DropdownWrapper>
         <DropdownMenu>
           {menuData.map((item, index) => (
-            <DropdownLink to={item.link} key={index}>
+            <DropdownLink to={item.path} key={index} onClick={toggle}>
               {item.title}
             </DropdownLink>
           ))}

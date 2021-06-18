@@ -7,13 +7,14 @@
 
 ## 2. 사용된 기술/프레임워크 ⚙
 
-    -React
-    -React-Scroll
-    -Animation on Scroll(Aos)
-    -Styled-components
-    -Kakao Api
+    React
+    React-Scroll
+    Animation on Scroll(Aos)
+    Styled-components
+    Kakao Api
 
 ## 3. 소개 📑
+
  ### 3.1 Responsive-Web
  
  </br></br></br></br></br>
@@ -40,9 +41,23 @@
   React 라이브러리를 활용하여 SPA 방식으로 구현된 프로젝트이며, React-Scroll을 통해 사용자가 다른 섹션으로 이동할 때 페이지를 다시 re-rendering하지 않아 뛰어난 사용자 경험을
   제공합니다.
  
-## 4. 설치 💻
+## 4. 설치 및 환경 💻
+
+### 4.1 설치
 
     yarn add
+
+### 4.2 지원 환경
+
+|브라우저|지원 여부|
+|:------:|:---:|
+|![chrome_browser_logo_icon_153007](https://user-images.githubusercontent.com/76080411/122536040-1522ba00-d05f-11eb-9225-cc48f1ecab66.png)|⭕|
+|![edge_browser_logo_icon_152998 (1)](https://user-images.githubusercontent.com/76080411/122536173-384d6980-d05f-11eb-9274-d12d40d553a5.png)|⭕|
+|![firefox_browser_logo_icon_152991 (1)](https://user-images.githubusercontent.com/76080411/122536366-67fc7180-d05f-11eb-8317-97c532da4786.png)|⭕|
+|![opera_browser_logo_icon_152972](https://user-images.githubusercontent.com/76080411/122536332-603ccd00-d05f-11eb-81c8-bc3dcf163090.png)|⭕|
+|![4202108browsereedgelogo-115709_115592](https://user-images.githubusercontent.com/76080411/122536401-72b70680-d05f-11eb-869a-8ba641f8a45b.png)|❌|
+|![safari_ios_browser_logo_icon_152966](https://user-images.githubusercontent.com/76080411/122536463-84001300-d05f-11eb-898d-38f654af507b.png)|❓|
+|![samsung_internet_browser_logo_icon_152962](https://user-images.githubusercontent.com/76080411/122536485-895d5d80-d05f-11eb-9973-7bb1def22792.png)|⭕|
 
 ## 5. 참고 ❗
 
